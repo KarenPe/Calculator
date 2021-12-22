@@ -40,8 +40,8 @@ add_executable(Calculator
         difform.h
         difform.cpp
         difform.ui
-        output.txt
 )
+
 find_package(Doxygen)
 if (DOXYGEN_FOUND)
   set(doxyfile_cfg ${CMAKE_CURRENT_BINARY_DIR}/doxyfile.cfg)
