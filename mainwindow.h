@@ -2,10 +2,13 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <fstream>
-#include <form.h>
-#include <difform.h>
+#include <QTextStream>
+#include <QFile>
+#include <cmath>
+#include "form.h"
+#include "difform.h"
 #include <QMessageBox>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -37,11 +40,13 @@ private slots:
      */
     void on_DifButton_clicked();
 
+    void saveData(const QString& FIO, double resultSum, double overPayment, double sumPerMonthOutput, bool anFlag);
+
 private:
     Ui::MainWindow *ui;
     Form form;
     DifForm difForm;
-
+    QFile file;
 };
 
 
