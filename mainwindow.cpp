@@ -45,13 +45,31 @@ double DifCalculator::overPayment() const {
 DifCalculator::~DifCalculator() = default;
 
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), file("C:\\Users\\PC\\Documents\\Calculator_final\\Calculator-main\\output.txt") {
     ui->setupUi(this);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::saveData(const QString& FIO, double resultSum, double overPayment, double sumPerMonthOutput, bool anFlag)
+{
+    if (file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream fout(&file);
+        if (anFlag) {
+            fout << QString("Аннуитетный платеж\n");
+        } else {
+            fout << QString("Дифференцированный платеж\n");
+        }
+        fout << QString("Фамилия Имя Отчество: ") << FIO << '\n';
+        fout << QString("Полная выплата: ") << resultSum << '\n';
+        fout << QString("Переплата: ") << overPayment << '\n';
+        fout << QString("Ежемесячный платеж: ") << sumPerMonthOutput << '\n' << '\n';
+    }
+
+    file.close();
 }
 
 void MainWindow::on_AnButton_clicked()
@@ -87,7 +105,10 @@ void MainWindow::on_AnButton_clicked()
     if (flag) {
         AnnuityCalculator calculator(sum, percent, months);
 
+        QString fio = ui->lineEdit_FIO->text();
         form.setData(calculator.resultSum(), calculator.overPayment(), calculator.sumPerMonthOutput());
+
+        saveData(fio, calculator.resultSum(), calculator.overPayment(), calculator.sumPerMonthOutput(), true);
 
         form.show();
     }
@@ -127,13 +148,12 @@ void MainWindow::on_DifButton_clicked()
     if (flag) {
         DifCalculator calculator(sum, percent, months);
 
+        QString fio = ui->lineEdit_FIO->text();
+
         difForm.setData(calculator.resultSum(), calculator.overPayment(), calculator.sumPerMonthOutput());
+
+        saveData(fio, calculator.resultSum(), calculator.overPayment(), calculator.sumPerMonthOutput(), false);
 
         difForm.show();
     }
 }
-
-
-
-
-
