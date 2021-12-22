@@ -45,7 +45,7 @@ double DifCalculator::overPayment() const {
 DifCalculator::~DifCalculator() = default;
 
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), file("C:\\Users\\PC\\Documents\\Calculator_final\\Calculator-main\\output.txt") {
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), file("output.txt") {
     ui->setupUi(this);
 }
 

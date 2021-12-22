@@ -40,7 +40,24 @@ add_executable(Calculator
         difform.h
         difform.cpp
         difform.ui
-        input.txt
+)
+
+find_package(Doxygen)
+if (DOXYGEN_FOUND)
+  set(doxyfile_cfg ${CMAKE_CURRENT_BINARY_DIR}/doxyfile.cfg)
+
+  add_custom_target(get_doc ALL
+                                        COMMAND ${DOXYGEN_EXECUTABLE} ${doxyfile_cfg}
+                                        COMMENT "Generating API documentation with Doxygen"
+                                        VERBATIM)
+endif()
+
+set(dir_src_doc ${CMAKE_CURRENT_BINARY_DIR}/doc/rtf/)
+install(
+        DIRECTORY
+                "${dir_src_doc}"
+        DESTINATION
+                doc
 )
 install(FILES $<TARGET_FILE:Qt5::Widgets> DESTINATION bin)
 
@@ -66,5 +83,3 @@ install(DIRECTORY ${QT_MAIN_DIR}/plugins/imageformats/
 
 
 target_link_libraries(Calculator PRIVATE Qt5::Widgets PRIVATE Qt5::Gui)
-
-

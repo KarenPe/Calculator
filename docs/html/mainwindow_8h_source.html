@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Кредитный калькулятор: Исходный файл C:/Calculator-main/mainwindow.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Кредитный калькулятор
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.2 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',false,false,'search.php','Поиск');
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">C:/Calculator-main/mainwindow.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MAINWINDOW_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MAINWINDOW_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;form.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;difform.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>QT_BEGIN_NAMESPACE</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>Ui { <span class="keyword">class </span><a class="code hl_class" href="class_main_window.html">MainWindow</a>; }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>QT_END_NAMESPACE</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_main_window.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_main_window.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    Q_OBJECT</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_function" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="class_main_window.html">~MainWindow</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a4395fdfdde5d1d34c91959660ae08027">on_AnButton_clicked</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#ac78af07c1b1d4f4556a5ee1e70779f3d">on_DifButton_clicked</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    Ui::MainWindow *ui;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_class" href="class_form.html">Form</a> form;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="class_dif_form.html">DifForm</a> difForm;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_calculator.html">   48</a></span><span class="keyword">class </span><a class="code hl_class" href="class_calculator.html">Calculator</a> {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">double</span> sum;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">int</span> percent;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">int</span> months;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_function" href="class_calculator.html#a00544286ea478e664eb28fc673d708f1">Calculator</a>(<span class="keywordtype">double</span> sum, <span class="keywordtype">int</span> percent, <span class="keywordtype">int</span> months);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_calculator.html#af3b0dd284832ec5c106355580394f625">   62</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_calculator.html#af3b0dd284832ec5c106355580394f625">resultSum</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_calculator.html#aa88b31606658313dcff03aca64b51b58">   67</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_calculator.html#aa88b31606658313dcff03aca64b51b58">overPayment</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_calculator.html#a0d6d4fbfd25c34ecf05ce46a37cbafcb">   72</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="class_calculator.html#a0d6d4fbfd25c34ecf05ce46a37cbafcb">sumPerMonthOutput</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_annuity_calculator.html">   77</a></span><span class="keyword">class </span><a class="code hl_class" href="class_annuity_calculator.html">AnnuityCalculator</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_calculator.html">Calculator</a> {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_class" href="class_annuity_calculator.html">AnnuityCalculator</a>(<span class="keywordtype">double</span> sum, <span class="keywordtype">int</span> percent, <span class="keywordtype">int</span> months);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_annuity_calculator.html#aaebe3dd4784c3256e2d527c320d882e5">sumPerMonthOutput</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_annuity_calculator.html#aea4316a82acfdd91156ef643c9c21f66">resultSum</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_annuity_calculator.html#a5a72eff5c4932e170c9639174958786c">overPayment</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_class" href="class_annuity_calculator.html">~AnnuityCalculator</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_dif_calculator.html">  103</a></span><span class="keyword">class </span><a class="code hl_class" href="class_dif_calculator.html">DifCalculator</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_calculator.html">Calculator</a> {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_class" href="class_dif_calculator.html">DifCalculator</a>(<span class="keywordtype">double</span> sum, <span class="keywordtype">int</span> percent, <span class="keywordtype">int</span> months);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_dif_calculator.html#a531e391fae491431d5196658732b6f2e">sumPerMonthOutput</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_dif_calculator.html#aba3641c48aa1cc614b8b4e5626e43f42">resultSum</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_dif_calculator.html#afcaed31edae4a6413cc7337ee09a9dd3">overPayment</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_class" href="class_dif_calculator.html">~DifCalculator</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>};</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif </span><span class="comment">// MAINWINDOW_H</span></div>
+<div class="ttc" id="aclass_annuity_calculator_html"><div class="ttname"><a href="class_annuity_calculator.html">AnnuityCalculator</a></div><div class="ttdef"><b>Definition:</b> mainwindow.h:77</div></div>
+<div class="ttc" id="aclass_annuity_calculator_html_a5a72eff5c4932e170c9639174958786c"><div class="ttname"><a href="class_annuity_calculator.html#a5a72eff5c4932e170c9639174958786c">AnnuityCalculator::overPayment</a></div><div class="ttdeci">double overPayment() const override</div><div class="ttdoc">overPayment переопределенный метод из базового класса</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:17</div></div>
+<div class="ttc" id="aclass_annuity_calculator_html_aaebe3dd4784c3256e2d527c320d882e5"><div class="ttname"><a href="class_annuity_calculator.html#aaebe3dd4784c3256e2d527c320d882e5">AnnuityCalculator::sumPerMonthOutput</a></div><div class="ttdeci">double sumPerMonthOutput() const override</div><div class="ttdoc">sumPerMonthOutput переопределенный метод из базового класса</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:8</div></div>
+<div class="ttc" id="aclass_annuity_calculator_html_aea4316a82acfdd91156ef643c9c21f66"><div class="ttname"><a href="class_annuity_calculator.html#aea4316a82acfdd91156ef643c9c21f66">AnnuityCalculator::resultSum</a></div><div class="ttdeci">double resultSum() const override</div><div class="ttdoc">resultSum переопределенный метод из базового класса</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:13</div></div>
+<div class="ttc" id="aclass_calculator_html"><div class="ttname"><a href="class_calculator.html">Calculator</a></div><div class="ttdef"><b>Definition:</b> mainwindow.h:48</div></div>
+<div class="ttc" id="aclass_calculator_html_a00544286ea478e664eb28fc673d708f1"><div class="ttname"><a href="class_calculator.html#a00544286ea478e664eb28fc673d708f1">Calculator::Calculator</a></div><div class="ttdeci">Calculator(double sum, int percent, int months)</div><div class="ttdoc">Calculator конструктор для калькулятора</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:4</div></div>
+<div class="ttc" id="aclass_calculator_html_a0d6d4fbfd25c34ecf05ce46a37cbafcb"><div class="ttname"><a href="class_calculator.html#a0d6d4fbfd25c34ecf05ce46a37cbafcb">Calculator::sumPerMonthOutput</a></div><div class="ttdeci">virtual double sumPerMonthOutput() const =0</div><div class="ttdoc">sumPerMonthOutput метод рассчета ежемесячной выплаты</div></div>
+<div class="ttc" id="aclass_calculator_html_aa88b31606658313dcff03aca64b51b58"><div class="ttname"><a href="class_calculator.html#aa88b31606658313dcff03aca64b51b58">Calculator::overPayment</a></div><div class="ttdeci">virtual double overPayment() const =0</div><div class="ttdoc">overPayment метод рассчета итоговой переплаты</div></div>
+<div class="ttc" id="aclass_calculator_html_af3b0dd284832ec5c106355580394f625"><div class="ttname"><a href="class_calculator.html#af3b0dd284832ec5c106355580394f625">Calculator::resultSum</a></div><div class="ttdeci">virtual double resultSum() const =0</div><div class="ttdoc">resultSum метод рассчета итоговой выплаты</div></div>
+<div class="ttc" id="aclass_dif_calculator_html"><div class="ttname"><a href="class_dif_calculator.html">DifCalculator</a></div><div class="ttdef"><b>Definition:</b> mainwindow.h:103</div></div>
+<div class="ttc" id="aclass_dif_calculator_html_a531e391fae491431d5196658732b6f2e"><div class="ttname"><a href="class_dif_calculator.html#a531e391fae491431d5196658732b6f2e">DifCalculator::sumPerMonthOutput</a></div><div class="ttdeci">double sumPerMonthOutput() const override</div><div class="ttdoc">sumPerMonthOutput переопределенный метод из базового класса</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:26</div></div>
+<div class="ttc" id="aclass_dif_calculator_html_aba3641c48aa1cc614b8b4e5626e43f42"><div class="ttname"><a href="class_dif_calculator.html#aba3641c48aa1cc614b8b4e5626e43f42">DifCalculator::resultSum</a></div><div class="ttdeci">double resultSum() const override</div><div class="ttdoc">resultSum переопределенный метод из базового класса</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:30</div></div>
+<div class="ttc" id="aclass_dif_calculator_html_afcaed31edae4a6413cc7337ee09a9dd3"><div class="ttname"><a href="class_dif_calculator.html#afcaed31edae4a6413cc7337ee09a9dd3">DifCalculator::overPayment</a></div><div class="ttdeci">double overPayment() const override</div><div class="ttdoc">overPayment переопределенный метод из базового класса</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:41</div></div>
+<div class="ttc" id="aclass_dif_form_html"><div class="ttname"><a href="class_dif_form.html">DifForm</a></div><div class="ttdef"><b>Definition:</b> difform.h:11</div></div>
+<div class="ttc" id="aclass_form_html"><div class="ttname"><a href="class_form.html">Form</a></div><div class="ttdef"><b>Definition:</b> form.h:11</div></div>
+<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdef"><b>Definition:</b> mainwindow.h:15</div></div>
+<div class="ttc" id="aclass_main_window_html_a4395fdfdde5d1d34c91959660ae08027"><div class="ttname"><a href="class_main_window.html#a4395fdfdde5d1d34c91959660ae08027">MainWindow::on_AnButton_clicked</a></div><div class="ttdeci">void on_AnButton_clicked()</div><div class="ttdoc">on_Pressbutton_clicked метод нажатия на кнопку рассчета аннуитетного платежа</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:57</div></div>
+<div class="ttc" id="aclass_main_window_html_a996c5a2b6f77944776856f08ec30858d"><div class="ttname"><a href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=nullptr)</div><div class="ttdoc">MainWindow конструктор для главной формы</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:48</div></div>
+<div class="ttc" id="aclass_main_window_html_ac78af07c1b1d4f4556a5ee1e70779f3d"><div class="ttname"><a href="class_main_window.html#ac78af07c1b1d4f4556a5ee1e70779f3d">MainWindow::on_DifButton_clicked</a></div><div class="ttdeci">void on_DifButton_clicked()</div><div class="ttdoc">on_pushButton_clicked метод нажатия на кнопку рассчета дифференцированного платежа</div><div class="ttdef"><b>Definition:</b> mainwindow.cpp:97</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>
