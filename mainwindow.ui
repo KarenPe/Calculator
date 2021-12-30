@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>642</width>
-    <height>462</height>
+    <width>679</width>
+    <height>433</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>110</y>
-      <width>371</width>
+      <y>150</y>
+      <width>361</width>
       <height>108</height>
      </rect>
     </property>
@@ -66,6 +66,9 @@
        </property>
       </widget>
      </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineEdit_months"/>
+     </item>
      <item row="3" column="0">
       <widget class="QLabel" name="label_4">
        <property name="font">
@@ -81,17 +84,14 @@
      <item row="3" column="1">
       <widget class="QLineEdit" name="lineEdit_sum"/>
      </item>
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEdit_months"/>
-     </item>
     </layout>
    </widget>
    <widget class="QPushButton" name="AnButton">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>280</y>
-      <width>211</width>
+      <x>30</x>
+      <y>320</y>
+      <width>271</width>
       <height>22</height>
      </rect>
     </property>
@@ -102,9 +102,9 @@
    <widget class="QPushButton" name="DifButton">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>280</y>
-      <width>241</width>
+      <x>320</x>
+      <y>320</y>
+      <width>311</width>
       <height>22</height>
      </rect>
     </property>
@@ -115,10 +115,10 @@
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>210</x>
       <y>20</y>
-      <width>241</width>
-      <height>51</height>
+      <width>291</width>
+      <height>23</height>
      </rect>
     </property>
     <property name="font">
@@ -132,13 +132,26 @@
      <string>Кредитный калькулятор</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="ReadButton">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>90</y>
+      <width>231</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Считать данные с файла</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>642</width>
+     <width>679</width>
      <height>21</height>
     </rect>
    </property>
