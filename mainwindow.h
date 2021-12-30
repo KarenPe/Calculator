@@ -40,6 +40,8 @@ private slots:
      */
     void on_DifButton_clicked();
 
+    void on_ReadButton_clicked();
+
     void saveData(const QString& FIO, double resultSum, double overPayment, double sumPerMonthOutput, bool anFlag);
 
 private:
@@ -47,6 +49,7 @@ private:
     Form form;
     DifForm difForm;
     QFile file;
+    QFile file_read;
 };
 
 
