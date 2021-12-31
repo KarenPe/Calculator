@@ -78,21 +78,30 @@ void MainWindow::on_ReadButton_clicked() {
         while(!file_read.atEnd() && i < 4) {
             if (i == 0) {
                 ui->lineEdit_FIO->setText(QString(file_read.readLine()));
+                dataForm.pushData(QString("Ф.И.О: ") + QString(ui->lineEdit_FIO->text()));
             }
             else if (i == 1) {
                 ui->lineEdit_percent->setText(QString(file_read.readLine()));
+                dataForm.pushData(QString("Процетная ставка: ") + QString(ui->lineEdit_percent->text()));
             }
             else if (i == 2) {
                 ui->lineEdit_months->setText(QString(file_read.readLine()));
+                dataForm.pushData(QString("Кол-во месяцев: ") + QString(ui->lineEdit_months->text()));
             }
             else if (i == 3) {
                 ui->lineEdit_sum->setText(QString(file_read.readLine()));
+                dataForm.pushData(QString("Сумма кредита: ") + QString(ui->lineEdit_sum->text()));
             }
             ++i;
         }
+        dataForm.pushData("\n");
         file_read.close();
     }
     QMessageBox::about(this, "Успех", "Данные считаны с файла");
+}
+
+void MainWindow::on_HistoryButton_clicked() {
+    dataForm.show();
 }
 
 void MainWindow::on_AnButton_clicked()
@@ -132,6 +141,12 @@ void MainWindow::on_AnButton_clicked()
         form.setData(calculator.resultSum(), calculator.overPayment(), calculator.sumPerMonthOutput());
 
         saveData(fio, calculator.resultSum(), calculator.overPayment(), calculator.sumPerMonthOutput(), true);
+        dataForm.pushData(QString("Рассчетные данные аннуитетного платежа для : "));
+        dataForm.pushData(fio);
+        dataForm.pushData(QString("Итоговая выплата: ") + QString::number(calculator.resultSum()));
+        dataForm.pushData(QString("Переплата: ") + QString::number(calculator.overPayment()));
+        dataForm.pushData(QString("Ежемесячный платеж: ") + QString::number(calculator.sumPerMonthOutput()));
+        dataForm.pushData("\n");
 
         form.show();
     }
@@ -176,6 +191,13 @@ void MainWindow::on_DifButton_clicked()
         difForm.setData(calculator.resultSum(), calculator.overPayment(), calculator.sumPerMonthOutput());
 
         saveData(fio, calculator.resultSum(), calculator.overPayment(), calculator.sumPerMonthOutput(), false);
+
+        dataForm.pushData(QString("Рассчетные данные дифференцированного платежа для : "));
+        dataForm.pushData(fio);
+        dataForm.pushData(QString("Итоговая выплата: ") + QString::number(calculator.resultSum()));
+        dataForm.pushData(QString("Переплата: ") + QString::number(calculator.overPayment()));
+        dataForm.pushData(QString("Ежемесячный платеж: ") + QString::number(calculator.sumPerMonthOutput()));
+        dataForm.pushData("\n");
 
         difForm.show();
     }
