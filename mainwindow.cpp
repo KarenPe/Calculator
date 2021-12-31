@@ -45,7 +45,7 @@ double DifCalculator::overPayment() const {
 DifCalculator::~DifCalculator() = default;
 
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), file("output.txt") {
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), file("output.txt"), file_read("../input.txt") {
     ui->setupUi(this);
 }
 
@@ -70,6 +70,29 @@ void MainWindow::saveData(const QString& FIO, double resultSum, double overPayme
     }
 
     file.close();
+}
+
+void MainWindow::on_ReadButton_clicked() {
+    if ((file_read.exists()) && (file_read.open(QIODevice::ReadOnly))) {
+        int i = 0;
+        while(!file_read.atEnd() && i < 4) {
+            if (i == 0) {
+                ui->lineEdit_FIO->setText(QString(file_read.readLine()));
+            }
+            else if (i == 1) {
+                ui->lineEdit_percent->setText(QString(file_read.readLine()));
+            }
+            else if (i == 2) {
+                ui->lineEdit_months->setText(QString(file_read.readLine()));
+            }
+            else if (i == 3) {
+                ui->lineEdit_sum->setText(QString(file_read.readLine()));
+            }
+            ++i;
+        }
+        file_read.close();
+    }
+    QMessageBox::about(this, "Успех", "Данные считаны с файла");
 }
 
 void MainWindow::on_AnButton_clicked()
