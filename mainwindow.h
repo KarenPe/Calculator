@@ -7,6 +7,7 @@
 #include <cmath>
 #include "form.h"
 #include "difform.h"
+#include "dataform.h"
 #include <QMessageBox>
 #include <QString>
 
@@ -42,12 +43,15 @@ private slots:
 
     void on_ReadButton_clicked();
 
+    void on_HistoryButton_clicked();
+
     void saveData(const QString& FIO, double resultSum, double overPayment, double sumPerMonthOutput, bool anFlag);
 
 private:
     Ui::MainWindow *ui;
     Form form;
     DifForm difForm;
+    DataForm dataForm;
     QFile file;
     QFile file_read;
 };
