@@ -40,6 +40,9 @@ add_executable(Calculator
         difform.h
         difform.cpp
         difform.ui
+        dataform.h
+        dataform.cpp
+        dataform.ui
 )
 
 find_package(Doxygen)
